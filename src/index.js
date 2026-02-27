@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from "react-router-dom"; 
-import Home from "./pages/Home";
-import Album from "./pages/Album";  
+import Home from "./pages/HomePage/Home";
 
 
 
@@ -16,11 +15,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "/album/:albumId",
-        element: <Album />,
-      },
+      }
     ],
   },
 ]);

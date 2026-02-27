@@ -93,16 +93,30 @@ function Search({ searchData, placeholder }) {
             }, []);
 
             return (
-              <li
+            <li
                 className={styles.listElement}
                 {...getOptionProps({ option, index })}
               >
-                <div>
-                  <p className={styles.albumTitle}>{option.title}</p>
+                <div className={styles.albumRow}>
+                  {/* LEFT - IMAGE */}
+                  <img
+                    src={option.image}
+                    alt={option.title}
+                    className={styles.albumImage}
+                  />
 
-                  <p className={styles.albumArtists}>
-                    {truncate(artists.join(", "), 40)}
-                  </p>
+                  {/* CENTER - TEXT */}
+                  <div className={styles.albumInfo}>
+                    <p className={styles.albumTitle}>{option.title}</p>
+                    <p className={styles.albumArtists}>
+                      {truncate(artists.join(", "), 40)}
+                    </p>
+                  </div>
+
+                  {/* RIGHT - FOLLOWERS */}
+                  <div className={styles.followers}>
+                    {option.follows} Follows
+                  </div>
                 </div>
               </li>
             );

@@ -1,12 +1,6 @@
-export const truncate = (text, len = 25) => {
-  if (!text) return "";
-  return text.length > len ? text.slice(0, len) + "..." : text;
-};
-
-export const debounce = (fn, delay = 300) => {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn(...args), delay);
-  };
-};
+export function truncate(input, length = 5) {
+  if (input.length > length) {
+    return input.substring(0, length) + "...";
+  }
+  return input;
+}

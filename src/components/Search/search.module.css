@@ -37,3 +37,39 @@
 .albumArtists {
   font-size: 12px;
 }
+.albumRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.albumImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.albumInfo {
+  flex: 1;
+  margin-left: 16px;
+}
+
+.albumTitle {
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+.albumArtists {
+  color: #aaa;
+  font-size: 13px;
+  margin: 4px 0 0 0;
+}
+
+.followers {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}

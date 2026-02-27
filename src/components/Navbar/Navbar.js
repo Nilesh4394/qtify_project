@@ -1,41 +1,23 @@
-import Search from "../Search/Search";
-import Logo from "../Logo/Logo";
-import "./navbar.module.css";
-import { useEffect, useState } from "react";
-import othersData from "../../data/OtherData";
-import Button from "../Button/Button";
+import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
+import Logo from "../Logo/Logo";
+import Search from "../Search/Search";
 import styles from "./navbar.module.css";
 
-
-
-
-function Navbar() {
-  const [albums, setAlbums] = useState([]);
-
-
-useEffect(() => {
-  setAlbums(othersData );
-}, []);
-
-  useEffect(() => {
-    fetch("https://qtify-backend.labs.crio.do/albums/top")
-      .then((res) => res.json())
-      .then(setAlbums);
-  }, []);
-
+function Navbar({ searchData }) {
   return (
-     <nav className={styles.navbar}>
+    <nav className={styles.navbar}>
       <Link to="/">
         <Logo />
       </Link>
       <Search
         placeholder="Search a song of your choice"
-        searchData={albums}
+        searchData={searchData}
       />
       <Button>Give Feedback</Button>
     </nav>
   );
 }
 
-export default Navbar;
+export default Navbar;                                                                                
