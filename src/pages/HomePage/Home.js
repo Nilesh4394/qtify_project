@@ -9,8 +9,14 @@ import styles from "./Home.module.css";
 export default function Home() {
   const { data } = useOutletContext();
   const { newAlbums, topAlbums, songs, genres } = data;
+  // console.log("topAlbums", topAlbums);
+  // console.log("newAlbums", newAlbums);
+  // console.log("songs", songs);  
+  
+
 
   console.log("genres", genres);
+  
 
   return (
     <>
