@@ -11,10 +11,11 @@ import CarouselRightNavigation from "./CarouselRightNavigation/CarouselRightNavi
 const Controls = ({ data }) => {
   const swiper = useSwiper();
 
-  useEffect(() => {
+ useEffect(() => {
+  if (swiper) {
     swiper.slideTo(0);
-  }, [data]);
-
+  }
+}, [swiper]);
   return <></>;
 };
 
